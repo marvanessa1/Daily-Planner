@@ -1,7 +1,7 @@
 var Container = $('container');
 
 var currentDay = moment();
-    $('#currentDay').text(currentDay.format("MMMM Do YYYY"));
+    $('#currentDay').text(currentDay.format("dddd, MMMM Do YYYY"));
 
 for (var i=8; i<24; i++){
 
