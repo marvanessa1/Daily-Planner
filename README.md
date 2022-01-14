@@ -27,7 +27,7 @@ The application also displays the current date at the top of the page
 
 # Application Mock-up
 
-![Daily Planner Screenshot GIF](./assets/images/screenshotGif.gif)
+![Daily Planner Screenshot GIF](./assets/images/screenshotGIF.gif)
 
 # Future Development
 - Clean and simplify script.js code, pertaining to getting items from localstorage so that code is not repetitive
