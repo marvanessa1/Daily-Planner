@@ -5,8 +5,6 @@ var currentDay = moment();
 
 for (var i=8; i<24; i++){
 
-    var hourValue = localStorage.getItem("hr-" + i);
-
     var TimeBlock = $("#hr-" + i)
         if (i <moment().hour()){
             TimeBlock.addClass("past")
@@ -19,29 +17,13 @@ for (var i=8; i<24; i++){
         }
 }
 
-var storedTask = JSON.parse(localStorage.getItem(savedTask));
-
- 
 
 var savedTask
 container.on("click", "button", function(event){
     event.preventDefault();
-    var hour = $(event.target).siblings("textarea").attr("id")
-    var Task= $(event.target).siblings("textarea").val()
-    var savedTask = {
-        hour: hour,
-        Task: Task
-    }
-
-    localStorage.setItem(hour, JSON.stringify(savedTask));
-    console.log(savedTask);
+    var hour = $(event.target).parent().attr("id")
+    var task= $(event.target).siblings("textarea").val()
+  
+    localStorage.setItem(hour,task)    
+    console.log(task);
 });
-
-function renderSavedTask(){
-    var hourlyTask = JSON.parsel(localStorage.getItem("savedTask"));
-    if (hourlyTask !== null){
-        return
-    }
-}
-
-renderSavedTask();
